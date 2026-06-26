@@ -16,7 +16,7 @@ jobs:
           go-version-file: go.mod
 
       - name: Restore Go cache
-        uses: actions/cache/restore@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+        uses: actions/cache/restore@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
         with:
           path: |
             ~/.cache/go-build
@@ -31,7 +31,7 @@ jobs:
           ENV=ut gotestsum -- -tags=unit -count=1 -shuffle=on -covermode=count ./...
 
       - name: Save Go cache
-        uses: actions/cache/save@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+        uses: actions/cache/save@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
         with:
           path: |
             ~/.cache/go-build
